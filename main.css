@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+a {
+    text-decoration: none;
+    color: initial;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: darkgrey;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+h1 {
+    letter-spacing: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    overflow: scroll;
+}
+
+#wrapper {
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    /*background-color: #79cc7ed5;*/
+    background-color: white;
+    font-family: serif;
+    color: black; 
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2px;
+}
+
+/* .logo-name img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+} */
+
+.logo-name h1{
+    padding-left: 20px;
+    font-weight: bolder;
+}
+
+
+/* --------------- NAVBAR / HAMBURGER MENU --------------- */
+
+.main-header nav {
+    margin: 0;
+    padding:0;
+}
+
+/* .main-header ul {
+    list-style: none;
+} */
+
+.main-header ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    flex-wrap: wrap;
+    align-self: center;
+    list-style: none;
+}
+
+.active .item {
+    display: block;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-media-icons i {
+    padding: 10px;
+}
+
+.hamburger-menu {
+    display: none;
+}
+ 
+.hamburger-menu i {
+    font-size: 50px;
+}
+
+.banner {
+    display: flex;
+    width: 100%;
+    height: 110vh;
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+}
+.banner::before{
+    content:"";
+    background-image: url("./images/main.jpg"); 
+    background-size: cover;
+    position: absolute;
+    opacity: 0.7;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+}
+
+/*
+.banner {
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+    background-image: url("./images/main.jpg"); 
+    opacity: 0.4;
+    filter:alpha(opacity=40);
+  ///  background-image: url("./images/banner.jfif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 7em;
+}
+
+
+.banner img{
+    
+    width: 100%;
+    height: auto;
+    
+}
+*/
+.about-description{
+    color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+.about-description h2{
+    padding: 0;
+    margin: 0;
+}
+
+.banner-heading {
+    /*color: #2c8a32d5;*/
+    color:black;
+    /* font-family: cursive; */
+    font-size: 1.9em;
+    position: absolute;
+    right: 0%;
+    bottom: 13%;
+    padding-right: 2em;
+ }
+
+ .banner-heading button{
+     /*background-color:  #79cc7ed5; */
+     background-color: #3b3b3b;
+     border: white;
+    
+     margin-left: 0px;
+     margin-bottom: 10px;
+     padding: 20px;
+     font-size: 15px;
+     border-radius: 5%;
+     color: white;
+ }
+
+
+ #story-background{
+     background-image: url(/images/sub2.jpg);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     /* color: #29411b; */
+ }
+
+ .about-description h2, p, li {
+    color: #29411b;
+ }
+
+ .repeat-def{
+    color: #29411b;
+    
+    font-size: 3.5rem;
+    text-align: center;
+    padding: 4%;
+    margin: 0;
+ }
+
+ footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    font-family: serif;
+    color: balck;
+    padding: 10px;
+    font-size: 0.7em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.icons-footer {
+    display: flex;
+    justify-content: space-around;
+    width: 9em;
+    align-items: center;
+}
+
+.icons-footer i {
+    /* display: flex;
+    justify-content: space-around; */
+    font-size: 1.5em;
+}
+
+ .icon-heading {
+    display: flex;
+    flex-direction: column;
+}
+
+.address {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.page-heading {
+    margin: 0;
+    padding: 4%;
+    font-size: 3em;
+}
+
+/* --------------- ABOUT PAGE --------------- */
+
+.story-banner {
+    width: 100%;
+}
+
+.section-1 {
+    background-color: #29411b;
+    display: flex;
+    align-items: center;
+}
+
+.about-heading {
+    font-size: 4em;
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    right: 15%;
+    margin: auto;
+    text-align: end;
+}
+
+#story-background {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+} 
+
+#story-img {
+    width: 100%;
+}
+
+#story-text {
+    padding-left: 20%;
+    padding-right: 20%;
+    font-size: 14px;  
+    line-height: 25px;
+    padding-bottom: 5%;
+}
+
+/* Products styling */
+
+.img-row {
+    display: flex;
+    justify-content: space-around;
+    padding: 2%;
+}
+
+.product-A img{
+    width: 70%;
+    height: 350px;
+}
+
+.plant-img {
+    width: 30%;
+    height: auto;
+    padding: 4em 6em;
+}
+
+.about-description h2 { 
+    color: white;
+    font-size: 1.5em;
+    padding: 5%;
+    line-height: 2.2em;
+    font-size: 2em;
+    text-align: center;
+}
+
+.product-B img {
+    width: 70%;
+    height: 200px;
+}
+
+/*.product-C img{
+    margin-top: 200px;
+    width: 80%;
+    height: 450px;
+}
+*/
+#favorites{
+    display: flex;
+    padding: 1%;
+    margin-right: 50px;
+}
+#favorites > img {
+ width: 100px;
+
+}
+#favorites p {
+  
+    line-height: 3;
+    text-align: justify;
+}
+
+
+/* --------------- CONTACT PAGE --------------- */
+
+#contact {
+    background-image: url('images/contact-page.jpg');
+}
+
+.contact-main-form {
+    margin: 0 20%;
+    padding-bottom: 10%;
+}
+
+.contact-form {
+    text-align: left;
+    background: white; 
+    padding: 3em;
+}
+
+.about-description h2 { 
+    color: white;
+    font-size: 1.5em;
+    padding: 5%;
+    line-height: 2.2em;
+    font-size: 2em;
+    text-align: center;
+}
+
+
+.banner2 {
+    margin-top: 300px;
+    display: flex;
+    float: left;
+    width: 100%;
+    height: 110vh;
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner2::before {
+    content:"";
+    background-image: url("./images/sub2.jpg"); 
+    background-size: cover;
+    position: absolute;
+    opacity: 0.7;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+}
+
+.banner2 .banner-heading {
+    color:black;
+    font-size: 1.9em;
+    position: absolute;
+    padding-right: 2em;
+    padding-left: 1em;
+}
+
+.proximity {
+    line-height: 2;
+}
+    
+.submit-btn {
+    padding: 10px;
+    border: none;
+    background: darkgrey;
+    color: #fff;
+    border-radius: 3px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.contact-form form label{
+    font-size: 13px;
+    font-weight: 500;
+}
+input, select, textarea  {
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0 4px;
+    border: 1px solid rgb(204 204 204);
+    background: rgb(250 250 250);
+    color: grey;
+    font-family: sans-serif;
+    font-size: 12px;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+
+
+/* --------------- MEDIA QUERIES --------------- */
+
+@media (max-width: 1024px){
+    #wrapper{
+        display: flex;
+    }
+    /* .main-menu{
+        display: none;
+    } */
+    .social-media-icons{
+        display: none;
+    }
+    .hamburger-menu {
+        display: block;
+    }
+    .logo-name img{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    }
+    .banner{
+        height: 100vh;
+        background-position: -147px;
+        justify-content: center;
+    }
+    .banner-heading{
+        right: unset;
+        top: 15%;
+    }
+
+    .main-menu li {
+        width: 100%;
+    }
+
+    .item {
+        display: none;
+        width: 100%;
+        order: 2;
+    }
+    .about-heading{
+        font-size: 40px;
+    }
+    .section-1{
+        flex-direction: column;
+        
+    }
+    .about-description{
+        order: 1;
+    }
+    .plant-img{
+        width: 70%;
+        order: 0;
+    }
+}
+
+
+
+@media (max-width: 415px){
+    /* .main-menu {
+        display: none;
+    } */
+    .social-media-icons{
+        display: none;
+    }
+    .banner-heading{
+        top: 12%;
+        font-size: 15px;
+    }
+    .logo-name h1{
+        padding-left: 10px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .hamburger-menu i{
+        font-size: 30px;
+    }
+    .item {
+        width: 100%;
+    }
+}
+    
+
+.alignment {
+    padding: 0 10%;
+    line-height: 2.5;
+}
